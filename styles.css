@@ -1,0 +1,278 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    /* ### Primary */
+
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+
+    /* ### Accent */
+
+    --Blue: hsl(248, 32%, 49%);
+
+    /* ### Neutral */
+
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin: 0;
+}
+
+/* Weights: 400, 500, 600, 700 */
+
+body{
+    background-position: top, left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1120px;
+    
+}
+
+h1{
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+p{
+    color: white;
+   
+    margin-right: 1rem;
+}
+.title{
+    width: 50%;
+}
+
+.register{
+    width: 50%;
+   
+}
+aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Blue);
+    color: white;
+    width: 100%;
+    height: 60px;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0px 10px 0px hsl(249deg 10% 26% / 20%);
+}
+aside span{
+    font-weight: 300;
+}
+aside b{
+    font-weight: 700;
+}
+.form-register{
+    background-color: white;
+     box-shadow: 0px 10px 0px hsl(249deg 10% 26% / 20%);
+     border-radius: .5rem;
+     padding: 2.5rem;
+     border: 1px solid hsl(0deg 0% 84.25%);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    
+}
+
+form input{
+    padding: 1rem 2rem;
+    border-radius: .3rem;
+    border: 2px solid hsl(0deg 0% 84.25%);
+    box-sizing: border-box;
+    font-weight: 600;
+    color: var(--Dark-Blue);
+    width: 100%;
+}
+
+form input:focus{
+    border: 2px solid var(--Blue);
+    outline: none;
+}
+
+form input::placeholder{
+    color: var(--Dark-Blue);
+}
+
+input[type="submit"]{
+    background-color: var(--Green);
+    border:1px solid hsl(154.05deg 67.05% 37.71%);
+    box-shadow: inset 0px -3px 0px #2eb77c;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+span#message-alert{
+    margin-top: 0.4rem;
+    justify-content: flex-end;
+    font-style: italic;
+    color: var(--Red);
+    font-weight: 500;
+    display: none;
+}
+
+
+.form-register span{
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+    font-size: .75rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.form-register b{
+    font-weight: 700;
+    font-size: .75rem;
+    color: var(--Red);
+}
+
+
+fieldset{
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+fieldset ion-icon{
+    color: var(--Red);
+    font-size: 1.5rem;
+    position: absolute;
+    margin-right: 2rem;
+    margin-bottom: 1.5rem;
+    display: none;
+}
+
+.error input{
+    border: 2px solid var(--Red);
+    color: var(--Red);
+}
+
+.error input::placeholder{
+    color: var(--Red);
+}
+
+.error > #message-alert{
+    display: flex;
+}
+
+.error > ion-icon{
+    display: flex;
+}
+
+@media screen and (max-width: 1200px){
+    main{
+        padding: 1rem;
+    }
+    .form-register span{
+        display: block;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 768px){
+    .form-register span{
+        display: block;
+        text-align: center;
+    }
+    main{
+        max-width: 100%;
+        width: auto;
+        box-sizing: border-box;
+    }
+    h1{
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+    aside span{
+        font-size: .75rem;
+        text-align: center;
+    }
+    form input{
+        font-size: .75rem;
+        padding: 1rem 1rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    main{
+        flex-direction: column;
+        margin: 5rem 1rem;
+    }
+    .title{
+        width: 100%;
+    }
+    .register{
+        width: 100%;
+    }
+    h1{
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-size: .9rem;
+        line-height: 1.6rem;
+        margin-bottom: 4rem;
+    }
+    aside {
+        padding: 1.5rem 3rem;
+        box-sizing: border-box;
+        height: auto;
+    }
+    .form-register {
+        padding: 1.5rem;
+    }
+    form input{
+        border-width: 1px;
+    }
+
+    form input:focus{
+        border-width: 1px;
+    }
+
+    .error input{
+        border-width: 1px;
+        
+    }
+}
